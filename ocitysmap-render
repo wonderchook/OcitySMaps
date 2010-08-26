@@ -61,7 +61,7 @@ def main():
                       help="Don't insert the map and index inside a frame")
     parser.add_option('-z', '--zoom-factor',
                       metavar='[0-18]', help='Zoom factor for the'
-                      'rendering (default=16)', type='int', default =16)
+                      'rendering (default=18)', type='int', default =18)
     parser.add_option('-b', '--bounding-box', dest='bbox',  nargs=2,
                       metavar='LAT1,LON1 LAT2,LON2', help='Bounding box')
     parser.add_option('', '--polygon-osmid', dest='osmid', metavar='OSMID',
@@ -135,7 +135,7 @@ def main():
 
     try:
         prefix = 'ocitysmap_render_%d' % os.getpid()
-        renderer = OCitySMap(options.config_file, prefix, city_name,
+        renderer = OCitySMap('/home/maps/ocitysmap/ocitysmap.conf', prefix, city_name,
                              boundingbox, osmid, options.language)
     except BaseOCitySMapError, e:
         sys.stderr.write('ERROR: %s\n' % e)

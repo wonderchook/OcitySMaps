@@ -636,7 +636,7 @@ class OCitySMap:
         # built to represent the list of squares, and the list is
         # alphabetically-sorted.
         prev_locale = locale.getlocale(locale.LC_COLLATE)
-        locale.setlocale(locale.LC_COLLATE, self.i18n.language_code())
+       #locale.setlocale(locale.LC_COLLATE, self.i18n.language_code())
 
         def _humanize_street_label(street):
             return (self.i18n.user_readable_street(street[0]),

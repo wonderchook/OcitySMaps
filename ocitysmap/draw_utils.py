@@ -53,7 +53,7 @@ def enclose_in_frame(renderer, insurf_w, insurf_h,
     ctx.paint()
 
     # Default pen color
-    ctx.set_source_rgb (0, 0, 0)
+    ctx.set_source_rgb (1, 1, 1)
 
     # Draw the surface with a margin around it
     ctx.save()
